@@ -1,0 +1,379 @@
+:root {
+  --white-color: #FFFCE4;
+}
+
+*, *::after, *::before {box-sizing: border-box; margin: 0;}
+
+@font-face {
+  font-family: avenir;
+  src: url(./font/avenir-next.otf);
+}
+@font-face {
+  font-family: fredoka;
+  src: url(./font/fredoka.ttf);
+}
+@font-face {
+  font-family: urbanist;
+  src: url(./font/urbanist.ttf);
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+  /* background-image: url(./images/horny-background.png), url(./images/purple-glow.png); */
+  background-image: url(./images/purple-glow.png), url(./images/horny-background.png);
+  background-blend-mode: exclusion;
+  /* background-position: left top, 0px 0px;
+  background-repeat: repeat, no-repeat; */
+  background-position: 0px 0px, left top;
+  background-repeat: no-repeat, repeat;
+  /* background-size: 100%, 400px 400px; */
+  background-size: 400px 400px, 100%;
+  color: var(--white-color);
+  font-family: fredoka;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+
+button {
+  font-family: avenir;
+  padding: 10px 25px;
+  background: transparent;
+  border-radius: 5px; 
+  border: 1px solid var(--white-color);
+  border-bottom: 3px solid var(--white-color);
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+button:active {
+  transform: translateY(3px);
+  transition: transform 1ms;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* header { background-color: red;} */
+.header-container {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 0;
+  gap: 40px;
+}
+
+header h1 > img {
+  width: 50px;
+  /* position: absolute; */
+}
+
+header h1 {
+  /* position: relative; */
+  font-size: 50px;
+  font-weight: 500;
+}
+
+header button,
+.image {
+  width: fit-content;
+  margin: 0 auto;
+}
+.image {
+  width: 150px;
+}
+
+nav {
+  background: rgba(19, 19, 19, 0.1);
+  padding: 30px 0;
+  font-family: urbanist;
+  font-weight: 400;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav > * {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.night-mode > img {
+  width: 20px;
+}
+
+.logo h2 {
+  font-family: avenir;
+  font-weight: 500;
+}
+
+#lower-nav {
+  position: sticky;
+  background-color: rgba(19, 19, 19, 0.7);
+  backdrop-filter: blur(15px);
+  top: 0;
+}
+/* end of navigation bar style */
+
+/* main content START */
+main {
+  min-height: 80vh;
+  padding: 100px 0;
+}
+
+section {
+  border-bottom: 1px solid #828282;
+  padding: 50px 0;
+}
+section:last-child {
+  border: none;
+}
+section p:not(.testimony) {
+  line-height: 34px;
+}
+
+.partners > img {
+  display: block;
+}
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.center {
+  text-align: center;
+  width: fit-content;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.caption {
+  width: 80%;
+  max-width: 800px;
+}
+
+section > .container > * {
+  margin-block-end: 20px;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.testimony-card-background {
+  background: linear-gradient(to bottom, #898989 , #282828);
+  padding: 8px 8px 19px;
+  border-radius: 10px;
+}
+
+.testimony-card {
+  padding: 50px;
+  background-color: #000;
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 30px;
+  /* border-image: linear-gradient(to bottom, #898989 , #282828) 1;
+  border-style: solid;
+  border-width: 10px; */
+  /* border-radius: 100px; */
+}
+
+.column p {
+  margin: 20px 0;
+}
+
+.moon-app-cta > * {
+  margin-block-end: 40px;
+}
+
+.moon-app button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.moon-app button > img {
+  width: 20px;
+}
+
+.moon-app {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.app-screenshot {
+  order: -1 ;
+}
+/* main contents END */
+
+/* beginning of the 'two footers' style */
+#footer {
+  background-image: url(./images/stars-background.png), 
+  url(./images/stars.png), url(./images/stars.png);
+  background-position: left top, 5% 10%, 80% center;
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-blend-mode: difference;
+  text-align: center;
+  padding: 100px 0;
+}
+
+#footer .container > * {
+  margin-block: 20px;
+}
+
+#footer h2, #footer p {text-align: left;}
+#footer p {padding: 0 20px;}
+
+#socials {
+  border-top: 1px solid var(--white-color);
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#socials > * {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#footer-links {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 24px;
+}
+
+footer p {font-size: 24px;}
+.footer-heading {margin-bottom: 30px;}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+@media (width < 750px) {
+  /* nav {
+    padding: 30px 20px;
+  } */
+  header h1 {
+    font-size: 25px;
+  }
+  header h1 img {
+    width: 30px;
+  }
+
+  /* #higher-nav {
+    padding: 20px;
+  } */
+
+  #higher-nav > div.nav > div:first-child {
+    display: none;
+  }
+
+  #lower-nav .logo h2 {
+    display: none;
+  }
+
+  /* #lower-nav .night-mode {
+    display: none;
+  } */
+
+  #socials {
+    padding-left: 75px;
+  }
+}
+
+@media (width > 750px) {
+  #socials {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  section h2 {
+    font-weight: 500;
+    font-size: 50px;
+  }
+  section p:not(.testimony) {
+    font-size: 24px;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .image-grid > *:first-child {
+    grid-row: span 2;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .demacated {
+    border-right: 1px solid #fffcef;
+    padding-right: 30px;
+  }
+}
+
+@media (width > 1050px) {
+  #footer-links {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  #footer-links > * {
+    flex: 1;
+  }
+
+  .table {
+    display: flex;
+    gap: 30px;
+  }
+
+  .moon-app {
+    flex-direction: row;
+  }
+
+  .app-screenshot {
+    order: 1;
+  }
+}
