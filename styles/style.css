@@ -6,22 +6,21 @@
 
 @font-face {
   font-family: avenir;
-  src: url(./font/avenir-next.otf);
+  src: url(/font/avenir-next.otf);
 }
 @font-face {
   font-family: fredoka;
-  src: url(./font/fredoka.ttf);
+  src: url(/font/fredoka.ttf);
 }
 @font-face {
   font-family: urbanist;
-  src: url(./font/urbanist.ttf);
+  src: url(/font/urbanist.ttf);
 }
 
 body {
   margin: 0;
   background-color: #000;
-  background-image: url(./images/horny-background.png), url(./images/purple-glow.png);
-  /* background-image: url(./images/horny-background.png), radial-gradient(#FF4848 10.05%, #FF48B6 25.9%, #B748D7 45.71%, #9448E8 68.92%, #6248FF 91%); */
+  background-image: url(/images/horny-background.png), url(/images/purple-glow.png);
   background-blend-mode: exclusion;
   background-position: left top, left -50px;
   background-repeat: repeat, no-repeat;
@@ -38,10 +37,6 @@ a {
   font-family: inherit;
 }
 
-img {
-  max-width: 100%;
-}
-
 button {
   font-family: avenir;
   padding: 10px 25px;
@@ -51,6 +46,11 @@ button {
   border-bottom: 3px solid var(--white-color);
   color: var(--white-color);
   cursor: pointer;
+}
+
+
+img {
+  max-width: 100%;
 }
 
 button:active {
@@ -70,15 +70,16 @@ nav {
   font-weight: 400;
 }
 
+#night-mode {
+  width: 20px;
+  cursor: pointer;
+}
+
 #nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-}
-
-#night-mode > img {
-  width: 20px;
 }
 
 #nav > * {
@@ -99,51 +100,16 @@ main {
   padding: 100px 0;
 }
 
-article > * {
-  margin-block-end: 20px;
-}
-
-h1 {
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 40px;
-}
-
-.posted-by {
-  font-weight: 700;
-  font-size: 16px;
-}
-
-.time-of-post {
-  font-size: 16px;
-}
-
-p.article {
-  font-size: 24px;
-  line-height: 30px;
-}
-
-.share-article {
-  font-size: 24px;
-  margin-bottom: 20px;
-  width: fit-content;
-}
-
-aside {
-  width: max-content;
-  /* background-color: red; */
-}
-
-.share-to-links {
-  display: flex;
-  justify-content: space-between;
+.image {
+  display: block;
+  margin: 0 auto;
 }
 /* main contents END */
 
 /* beginning of the 'two footers' style */
 #footer {
-  background-image: url(./images/stars-background.png), 
-  url(./images/stars.png), url(./images/stars.png);
+  background-image: url(/images/stars-background.png), 
+  url(/images/stars.png), url(/images/stars.png);
   background-position: left top, 5% 10%, 80% center;
   background-repeat: repeat, no-repeat, no-repeat;
   background-blend-mode: difference;
@@ -221,22 +187,6 @@ footer p {font-size: 24px;}
     align-items: center;
   }
 
-  main {
-    display: grid;
-    grid-template-columns: auto 200px;
-    gap: 50px;
-    /* position: relative; */
-  }
-
-  main > *:nth-child(2) {
-    align-self: start;
-    margin-top: 150%;
-  }
-
-  aside {
-    position: sticky;
-    top: 30%;
-  }
 }
 
 @media (width > 1050px) {

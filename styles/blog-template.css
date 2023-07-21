@@ -6,21 +6,21 @@
 
 @font-face {
   font-family: avenir;
-  src: url(./font/avenir-next.otf);
+  src: url(/font/avenir-next.otf);
 }
 @font-face {
   font-family: fredoka;
-  src: url(./font/fredoka.ttf);
+  src: url(/font/fredoka.ttf);
 }
 @font-face {
   font-family: urbanist;
-  src: url(./font/urbanist.ttf);
+  src: url(/font/urbanist.ttf);
 }
 
 body {
   margin: 0;
   background-color: #000;
-  background-image: url(./images/horny-background.png), url(./images/purple-glow.png);
+  background-image: url(/images/horny-background.png), url(/images/purple-glow.png);
   background-blend-mode: exclusion;
   background-position: left top, left -50px;
   background-repeat: repeat, no-repeat;
@@ -70,8 +70,9 @@ nav {
   font-weight: 400;
 }
 
-#night-mode > img {
+#night-mode {
   width: 20px;
+  cursor: pointer;
 }
 
 #nav {
@@ -98,17 +99,12 @@ main {
   min-height: 80vh;
   padding: 100px 0;
 }
-
-.image {
-  display: block;
-  margin: 0 auto;
-}
 /* main contents END */
 
 /* beginning of the 'two footers' style */
 #footer {
-  background-image: url(./images/stars-background.png), 
-  url(./images/stars.png), url(./images/stars.png);
+  background-image: url(/images/stars-background.png), 
+  url(/images/stars.png), url(/images/stars.png);
   background-position: left top, 5% 10%, 80% center;
   background-repeat: repeat, no-repeat, no-repeat;
   background-blend-mode: difference;
@@ -171,9 +167,9 @@ footer p {font-size: 24px;}
     display: none;
   }
 
-  /* #night-mode {
+  #night-mode {
     display: none;
-  } */
+  }
 
   #socials {
     padding-left: 75px;
