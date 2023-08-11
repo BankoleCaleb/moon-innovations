@@ -21,31 +21,32 @@ const lowerNav = document.getElementById("lower-nav")
 let count = 0;
 // ---------------------------------------------------------------------------------------
 // making the lighting hover effect work
-header.addEventListener("mousemove", (event) => {
-  let body = document.querySelector("body")
+// header.addEventListener("mousemove", (event) => {
+//   let body = document.querySelector("body")
 
-  let offsetX = event.clientX
-  let offsetY = event.clientY
-  body.style.backgroundPositionX = `${offsetX - 200}px, left`
-  body.style.backgroundPositionY = `${offsetY - 200}px, top`
-})
+//   let offsetX = event.clientX
+//   let offsetY = event.clientY
+//   body.style.backgroundPositionX = `${offsetX - 200}px, left`
+//   body.style.backgroundPositionY = `${offsetY - 200}px, top`
+// })
 
-higherNav.addEventListener("mousemove", (event) => {
-  let body = document.querySelector("body")
+// higherNav.addEventListener("mousemove", (event) => {
+//   let body = document.querySelector("body")
 
-  let offsetX = event.clientX
-  let offsetY = event.clientY
-  body.style.backgroundPositionX = `${offsetX - 200}px, left`
-  body.style.backgroundPositionY = `${offsetY - 200}px, top`
-})
-lowerNav.addEventListener("mousemove", (event) => {
-  let body = document.querySelector("body")
+//   let offsetX = event.clientX
+//   let offsetY = event.clientY
+//   body.style.backgroundPositionX = `${offsetX - 200}px, left`
+//   body.style.backgroundPositionY = `${offsetY - 200}px, top`
+// })
 
-  let offsetX = event.clientX
-  let offsetY = event.clientY
-  body.style.backgroundPositionX = `${offsetX - 100}px, left`
-  body.style.backgroundPositionY = `${offsetY - 100}px, top`
-})
+// lowerNav.addEventListener("mousemove", (event) => {
+//   let body = document.querySelector("body")
+
+//   let offsetX = event.clientX
+//   let offsetY = event.clientY
+//   body.style.backgroundPositionX = `${offsetX - 100}px, left`
+//   body.style.backgroundPositionY = `${offsetY - 100}px, top`
+// })
 
 // ---------------------------------------------------------------------------------------
 // making the light/dark mode work
