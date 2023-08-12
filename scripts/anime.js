@@ -1,7 +1,7 @@
-let options = {
-  // threshold: .4,
-  // rootMargin: "-50px",
-};
+// let options = {
+//   threshold: .4,
+//   rootMargin: "-50px",
+// };
 
 const callback = entries => {
   // console.log(entries);
@@ -15,7 +15,7 @@ const callback = entries => {
   })
 }
 
-let observer = new IntersectionObserver(callback, options);
+let observer = new IntersectionObserver(callback);
 
 let container = document.querySelectorAll(".container:not(nav .container):not(footer .container):not(#footer .container)");
 

@@ -8,7 +8,20 @@
   <link rel="shortcut icon" href="/images/logo-dark.png" type="image/x-icon">
 
   <link rel="stylesheet" href="/styles/blog-post.css">
-  <link rel="stylesheet" href="/styles/anime.css">
+  <!-- <link rel="stylesheet" href="/styles/anime.css"> -->
+  <style>
+    .article-hidden, .aside-hidden {
+      opacity: 0;
+      transition: all ease 800ms;
+    }
+    .article-hidden {transform: translateX(-20%);}
+    .aside-hidden {transform: translateX(20%); opacity: 1;}
+    .article-visible, .aside-visible {
+      opacity: 1;
+      transform: translateX(0);
+      transition: all ease 800ms;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -29,7 +42,7 @@
   </nav>
 
   <main class="container" role="main">
-    <article>
+    <article class="article-hidden">
 
       <h1>Looking to the future: Solar inverters as a sustainable solution for Africa's energy needs</h1>
       <h5 class="posted-by">By Thomas Ogun, Content Developer</h5>
@@ -42,7 +55,7 @@
       <h2>The current state of affairs</h2>
       <p class="article">As the population in Africa continues to rise, so does the energy demand. Unfortunately, traditional energy sources such as oil and coal are both expensive and unreliable, leading to a lack of security when it comes to the power grid. Furthermore, the sheer size and complexity of the continent mean that many areas are still reliant on antiquated infrastructure and manual labor, making them highly inefficient. To make matters worse, the development of artificial intelligence has led to an increase in demand for computing power, further exacerbating the already existing energy crisis. The current situation is unsustainable, and a more sustainable solution must be found to meet the growing needs of the continent.</p>
     </article>
-    <aside>
+    <aside class="aside-hidden">
       <p class="share-article">Share This Article</p>
       <div class="share-to-links">
 
@@ -124,6 +137,26 @@
   </footer>
 
   <script src="/scripts/blog-post.js"></script>
-  <script src="/scripts/anime.js"></script>
+  <script>
+    const callback = entries => {
+      // console.log(entries);
+      if (entries[0].isIntersecting) {
+        entries[0].target.classList.add("article-visible");
+        observer.unobserve(entries[0].target)
+      } else {return;}
+      if (entries[1].isIntersecting) {
+        entries[1].target.classList.add("aside-visible");
+        observer.unobserve(entries[1].target)
+      } else {return;}
+    }
+
+    let observer = new IntersectionObserver(callback);
+
+    let article = document.querySelector("article")
+    let aside = document.querySelector("aside")
+
+    observer.observe(article)
+    observer.observe(aside)
+  </script>
 </body>
 </html>

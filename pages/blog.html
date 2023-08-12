@@ -8,7 +8,17 @@
   <link rel="shortcut icon" href="/images/logo-dark.png" type="image/x-icon">
 
   <link rel="stylesheet" href="/styles/blog.css">
-  <link rel="stylesheet" href="/styles/anime.css">
+  <style>
+    .block {
+      transform: scale(0.1);
+      opacity: 0;
+      transition: all ease 900ms;
+    }
+    .block.show-block {
+      transform: scale(1);
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -149,6 +159,25 @@
   </footer>
 
   <script src="/scripts/blog.js"></script>
-  <script src="/scripts/anime.js"></script>
+  <script>
+    const callback = entries => {
+      // console.log(entries);
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show-block")
+        } else {
+          entry.target.classList.remove("show-block")
+        }
+      })
+    }
+
+    let observer = new IntersectionObserver(callback);
+
+    let block = document.querySelectorAll(".block")
+
+    block.forEach(el => {
+      observer.observe(el)
+    })
+  </script>
 </body>
 </html>
