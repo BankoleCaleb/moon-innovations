@@ -1,6 +1,6 @@
 let options = {
-  // threshold: 0.1,
-  rootMargin: "-50px",
+  // threshold: .4,
+  // rootMargin: "-50px",
 };
 
 const callback = entries => {
@@ -20,5 +20,6 @@ let observer = new IntersectionObserver(callback, options);
 let container = document.querySelectorAll(".container:not(nav .container):not(footer .container):not(#footer .container)");
 
 container.forEach(container => {
+  container.parentElement.style.overflow = "hidden"
   observer.observe(container)
 })

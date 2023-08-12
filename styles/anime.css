@@ -1,12 +1,18 @@
 .container:not(nav .container):not(footer .container):not(#footer .container) {
-  transform: translateX(-100%);
+  transform: translateY(50%);
   /* transform: ; */
   opacity: 0;
-  transition: transform 800ms;
+  /* visibility: hidden; */
+  transition: all ease 800ms;
 }
 
 .container.restore:not(nav .container):not(footer .container):not(#footer .container) {
-  transform: translateX(0);
+  transform: translateY(0);
+  /* visibility: visible; */
   opacity: 1;
   /* background-color: red; */
 }
+
+/* section {
+  overflow: hidden;
+} */
