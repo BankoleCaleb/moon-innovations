@@ -71,6 +71,10 @@ nav {
   font-family: urbanist;
   font-weight: 400;
 }
+nav img {
+  min-width: 25px;
+}
+
 
 #nav {
   display: flex;

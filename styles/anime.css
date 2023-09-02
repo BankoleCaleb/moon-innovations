@@ -1,5 +1,5 @@
 .container:not(nav .container):not(footer .container):not(#footer .container) {
-  transform: translateY(50%);
+  transform: translateY(50px);
   /* transform: ; */
   opacity: 0;
   /* visibility: hidden; */
