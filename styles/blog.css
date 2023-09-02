@@ -198,7 +198,7 @@ footer p {font-size: 24px;}
   margin-bottom: 30px;
 }
 
-@media (width < 750px) {
+@media (max-width: 750px) {
   nav {
     padding: 30px 20px;
   }
@@ -219,7 +219,7 @@ footer p {font-size: 24px;}
     padding-left: 70px;
   }
 }
-@media (width > 1050px) {
+@media (min-width: 1050px) {
   #footer-links {
     flex-direction: row;
     justify-content: space-between;
@@ -237,7 +237,7 @@ footer p {font-size: 24px;}
 
 }
 
-@media (width > 750px) and (width < 1050px) {
+@media (min-width: 750px) and (width < 1050px) {
   #socials {
     flex-direction: row;
     align-items: center;
